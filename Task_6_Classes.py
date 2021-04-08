@@ -10,43 +10,44 @@ class Budget:
 #sector specifies which category they want to deposit/withdraw into and also the balance they want to check
 #amount specifies the money to be added or withdrawn of transferred
 
-
+    #for depositing into categories
     def deposit(self, sector, amount):
         if sector == 1:
             self.food = self.food + amount
-            return('Your balance is now %d' %self.food)
+            return('Your balance for Food is now %d' %self.food)
         elif sector == 2:
             self.clothing = self.clothing + amount
-            return ('Your balance is now %d' %self.clothing)
+            return ('Your balance for Clothing is now %d' %self.clothing)
         elif sector == 3:
             self.entertainment = self.entertainment + amount
-            return ('Your balance is now %d' %self.entertainment)
+            return ('Your balance for Entertainment is now %d' %self.entertainment)
         else:
             return('This is not a valid section')
 
         
         
-
+    #For withdrawing from categories
     def withdraw(self, sector, amount):
         if sector == 1:
             self.food = self.food - amount
-            return('Your balance is now %d' %self.food)
+            return('Your balance for Food is now %d' %self.food)
         elif sector == 2:
             self.clothing = self.clothing - amount
-            return ('Your balance is now %d' %self.clothing)
+            return ('Your balance for Clothing is now %d' %self.clothing)
         elif sector == 3:
             self.entertainment = self.entertainment - amount
-            return ('Your balance is now %d' %self.entertainment)
+            return ('Your balance for Entertainment is now %d' %self.entertainment)
         else:
             return('This is not a valid section')
 
+    #For checking balance of the categories
     def balance(self, sector):
         if sector == 1:
-            return('Your balance is %d' %self.food)
+            return('Your balance for Food is %d' %self.food)
         elif sector == 2:
-            return ('Your balance is %d' %self.clothing)
+            return ('Your balance for Clothing is %d' %self.clothing)
         elif sector == 3:
-            return ('Your balance is %d' %self.entertainment)
+            return ('Your balance for Entertainment is %d' %self.entertainment)
         else:
             return('This is not a valid section')
 
